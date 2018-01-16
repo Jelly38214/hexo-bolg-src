@@ -1,8 +1,8 @@
 ---
 title: redux_reducers
 date: 2018-01-16 22:56:29
-tags:
---- redux reducer
+tags: redux reducer
+---
 
 > Conclusion: reducers in redux must be pure function
 
