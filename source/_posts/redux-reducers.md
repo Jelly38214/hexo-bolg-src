@@ -6,6 +6,10 @@ tags: redux reducer
 
 > Conclusion: reducers in redux must be pure function
 
+whole redux process
+
+![](http://p150tzuds.bkt.clouddn.com/image/redux/redux.png)
+
 what's pure function? 
 
 `A pure function is a function where the return value is only determined by its input values, without observable side effects.`
@@ -46,6 +50,12 @@ let's see code block below
   }
 ```
 
+![](http://p150tzuds.bkt.clouddn.com/image/redux/pure-reducer.gif)
+
+## side effect
+
+![](http://p150tzuds.bkt.clouddn.com/image/redux/non-pure-reducers.gif)
+
 compare above two situations, only one difference is non-pure situation, the reducers changes the state and return it.In this situation, what would happend? result is the view not re-render event though you dispatch action.
 
 so what cause that.
@@ -53,6 +63,7 @@ so what cause that.
 it's time to dig out source code.
 
 ![](http://p150tzuds.bkt.clouddn.com/image/redux/reduces_src.png)
+
 
 the source code tell us clearly why reducers are pure function and why you cant execute asynchronous code in reducers
 
