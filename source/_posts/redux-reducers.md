@@ -56,6 +56,9 @@ it's time to dig out source code.
 
 the source code tell us clearly why reducers are pure function and why you cant execute asynchronous code in reducers
 
+`One more question: why redux only judge two obj's address in computer memories instead of comparing every properties of theme?`
 
-reference:
+Because deep compare is so expensive. so redux make a rule that you must return a new state obj for redux to judge and then re-render view. otherwise ,it will throw error when you return undefined , or dont re-render when you return the original state obj.
+
+Reference:
   * [为什么redux需要reducers是纯函数](http://www.zcfy.cc/article/why-redux-need-reducers-to-be-pure-functions-freecodecamp-2515.html)
