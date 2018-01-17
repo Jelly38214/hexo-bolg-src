@@ -17,3 +17,34 @@ tags: css
     background: linear-gradient(to bottom, #BAD1FB, #E2E9EE); /* autoprefixer will transform it */
   }
 ```
+
+> shaking effect (update 2018/1/17)
+```css
+  /* .face element could be a button or anything else even svg */
+  .face:hover {
+    animation: shake 0.82s cubi-bezier(.36,.07,.19,.97) both;
+    transform:translate3d(0,0,0);
+    backface-visibility:hidden;
+    perspective:1000px;
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform:translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform:translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform:translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform:translate3d(4px, 0, 0);
+    }
+  }
+
+```
+Reference: [css-tricks](https://css-tricks.com/snippets/css/shake-css-keyframe-animation/)
