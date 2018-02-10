@@ -4,7 +4,7 @@ date: 2018-02-01 22:54:51
 tags: ES6;babel
 ---
 
-## How ES6 features convert into ES5 by [Babel](https://babeljs.cn/repl/#?babili=false&evaluate=true&lineWrap=false&presets=latest%2Creact%2Cstage-2&experimental=false&loose=false&spec=false&code=%5B1%2C2%2C3%5D.map(n%20%3D%3E%20n%20%2B%201)%3B&playground=true).
+## How ES6 features convert into ES5 by [Babel](https://babeljs.cn/repl/).
 
 > spread/rest object({...{}})
 
