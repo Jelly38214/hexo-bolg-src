@@ -19,3 +19,5 @@ tags: algorithm
   hello.call(null, str) // => aStr=strInWindow, bStr=strInWindow done
   hello.call(object, str) // => aStr=strInObj, bStr=strInObj done
 ```
+
+> 不超过32位整数表示的意思， [check here](https://zhidao.baidu.com/question/152860342.html)
