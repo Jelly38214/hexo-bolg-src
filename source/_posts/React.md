@@ -90,5 +90,31 @@ This function will receive two params: `state and props`(caution: `state` params
   }
 ```
 
+---
+
+> React PropTypes is separated and form a `prop-types` module since Reactv15.5.0
+
+```javascript
+  // before v15.5.0
+  import React, {Component} from 'react'
+  class Comment extends Component {
+    //
+  }
+
+  Comment.propTypes = {
+    user: React.PropTypes.string
+  }
+
+  // since v15.5.0
+  import PropTypes from 'prop-types' // need to install 'prop-types' and then import it.
+  Comment.propTypes = {
+    user: PropTypes.string
+  }
+```
+
+`Babel Plugin transform-react-remove-prop-types` cant remove `prop-types` module in production model to reduce size of final package.
+
+
+
 
 
