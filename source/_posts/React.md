@@ -115,6 +115,81 @@ This function will receive two params: `state and props`(caution: `state` params
 `Babel Plugin transform-react-remove-prop-types` cant remove `prop-types` module in production model to reduce size of final package.
 
 
+---
+
+1. Why you should not use index as key props in traversal.
+
+```javascript
+  class App extends React.Component{
+	constructor(props) {
+		super(props)
+		this.state = {
+			list: [{id: 1,val: 'aa'}, {id: 2, val: 'bb'}, {id: 3, val: 'cc'},{id:4,val:'dd'}]
+		}
+	}
+
+	click() {
+		this.state.list.reverse()
+		this.setState({})
+	}
+	splice() {
+		this.state.list.splice(1,1)
+		this.setState({})
+	}
+
+	render() {
+		return (
+            <ul>
+                <div onClick={this.splice.bind(this)}>delete</div>
+                <div onClick={this.click.bind(this)}>reverse</div>
+                {
+                	this.state.list.map(function(item, index) {
+                		return (
+                            <Li key={index} val={item.val}></Li>
+                		)
+                	}.bind(this))
+                }
+            </ul>
+		)
+	}
+}
+
+class Li extends React.Component{
+	constructor(props) {
+		super(props)
+	}
+	componentDidMount() {
+		console.log('===mount===')
+	}
+	componentWillUpdate(nextProps, nextState) {
+		console.log('===update====')
+	}
+	render() {
+		return (
+            <li>
+                {this.props.val}
+                <input type="text"></input>
+            </li>
+		)
+	}
+}
+
+```
+you click reverse and you'll find that's noly text change , the input with number dont change their position. That's so weird. 
+But if you use id instead of index as key props, everything is ok.
+
+According to the element diff of React diff algorithm, if a element with a key props in the old vdom tree(mountedIndex), is bigger than lastIndex(initial zero), that's say, only `mountedIndex < lastIndex === true`, React will change this element's postion. then React will update lastIndex by `Math.max(mountedIndex, lastIndex)` 
+
+ In the this example, when use index as key, and click
+reverse , React pick the first element and found it's key's value equal to 0, and the lastIndex equal zero too. `mountedIndex < lastIndex === false`, so React wouldn't change the input element position. for the second element, it's the same situation.(mountedIndex =1, and lastIndex = 0);
+
+for the third elemend, mountedIndex = 2, lastIndex = 1; // fasle and update lastIndex = 2
+
+for the fourth element, moutedIndex = 3, lastIndex = 2;
+// false and update lastIndex = 3.
 
 
-
+----
+Reference：
+  * [diff algorithm](https://zhuanlan.zhihu.com/p/20346379)
+  * [index bug](https://juejin.im/post/5a31dda3f265da43052ea207)
