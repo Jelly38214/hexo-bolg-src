@@ -62,3 +62,60 @@ webpack会给每个引入的模块添加序号，用于模块缓存对象的属�
 存在一个harmony-module的模块，用于commonjs和ES module之间的转换，
 当你的环境是浏览器时，建议全部使用ES6 module标准来编写模块，这样webpack就不会产生harmony-module这个模块出来。
 `注意`：虽然可能打包不出错，但在用import来导入commmonjs模块，有可能webpack-bundleanalyze不会正确显示包的依赖关系
+
+__WEBPACK_IMPORTED_MODULE_0__modulex__，webpack会递归地遍历模块依赖，并赋值给__WEBPACK_IMPORTED_MODULE_0__moduleX__的变量（X是序号）
+
+harmony-moduel 长这样，一般位于序号0的位置
+```javascript
+    /* 0 */
+ 	/***/
+ 	(function (module, exports) {
+
+ 		module.exports = function (originalModule) {
+ 			if (!originalModule.webpackPolyfill) {
+ 				var module = Object.create(originalModule);
+ 				// module.parent = undefined by default
+ 				if (!module.children) module.children = [];
+ 				Object.defineProperty(module, "loaded", {
+ 					enumerable: true,
+ 					get: function () {
+ 						return module.l;
+ 					}
+ 				});
+ 				Object.defineProperty(module, "id", {
+ 					enumerable: true,
+ 					get: function () {
+ 						return module.i;
+ 					}
+ 				});
+ 				Object.defineProperty(module, "exports", {
+ 					enumerable: true,
+ 				});
+ 				module.webpackPolyfill = 1;
+ 			}
+ 			return module;
+ 		};
+ 	}),
+```
+
+转换commonjs为es6 module
+```javascript
+    (function (module, __webpack_exports__, __webpack_require__) {
+
+ 		"use strict";
+ 		/* WEBPACK VAR INJECTION */
+ 		(function (module) { /* harmony import */
+ 			var __WEBPACK_IMPORTED_MODULE_0__module3__ = __webpack_require__(4);
+ 			/* harmony import */
+ 			var __WEBPACK_IMPORTED_MODULE_0__module3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__module3__);
+
+ 			module.exports = {
+ 				name: 'happy',
+ 				age: 23,
+ 				job: 'FE',
+ 				pet: __WEBPACK_IMPORTED_MODULE_0__module3___default.a
+ 			}
+ 			/* WEBPACK VAR INJECTION */
+ 		}.call(__webpack_exports__, __webpack_require__(0)(module)))
+
+```
