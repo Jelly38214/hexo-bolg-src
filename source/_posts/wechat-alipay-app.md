@@ -4,7 +4,7 @@ date: 2018-06-29 10:22:51
 tags: 小程序; iconfont; gulp;
 ---
 
-近来在开发支付宝小程序（大体和微信小程序拆不得），踩了些坑，记录下来，方便复盘。
+近来在开发支付宝小程序（大体和微信小程序差不多），踩了些坑，记录下来，方便复盘。
 
 > 整合阿里iconfont
 
@@ -30,3 +30,9 @@ tags: 小程序; iconfont; gulp;
 ![](http://p150tzuds.bkt.clouddn.com//wechat_app/iconfont_resource.png)
 
 整个gulp的部分作用就是把iconfont.tff自动进行base64化，而不需要去网站上进行转化。其中，`app.css`是放置全局css的，通过gulp，会合并iconfont的文件，一起生产小程序专用的全局css文件-- app.acss.(如果要生成微信小程序的，就改gulp文件，把生成文件的名字从app.acss变为app.wcss即可)
+
+参考：
+
+    * [文章1](https://www.jianshu.com/p/90da43965899)
+
+    * [文章2](https://juejin.im/entry/5a54b73b6fb9a01ca7135335)
