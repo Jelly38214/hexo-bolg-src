@@ -36,3 +36,23 @@ tags: 小程序; iconfont; gulp;
     * [文章1](https://www.jianshu.com/p/90da43965899)
 
     * [文章2](https://juejin.im/entry/5a54b73b6fb9a01ca7135335)
+
+
+> gulp配置@import路径的根目录
+
+为了简洁地引入全局的less文件`index.less`, 避免使用相对路径;
+
+根据less官网的说明，可以给less配置`rootpath`来指明@import的根目录
+```javascript
+    // 在gulpfile文件的less部分配置,具体内容查看上面的截图
+    .pipe(less({
+        globalVars:{
+            // 配置全局less变量
+        },
+        rootpath:path.resolve(__dirname,'./')
+    }))
+```
+
+通过上述配置，在我的小程序引入根目录下的styles文件夹的index.less文件就可以这样写
+
+`@import "styles/index.less"`,而不是这样写`@import "../../styles/index.less"`
