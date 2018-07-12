@@ -56,3 +56,9 @@ tags: 小程序; iconfont; gulp;
 通过上述配置，在我的小程序引入根目录下的styles文件夹的index.less文件就可以这样写
 
 `@import "styles/index.less"`,而不是这样写`@import "../../styles/index.less"`
+
+参考：
+
+    * [文章1](https://www.v2ex.com/t/223292)
+    
+    * [官网](http://lesscss.org/usage/#using-less-in-the-browser-options)
