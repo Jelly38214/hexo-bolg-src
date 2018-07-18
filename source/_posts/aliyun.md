@@ -18,3 +18,13 @@ You need to use a command to solve it.
     nvm alias default v8.10.0
 ```
  to specify default node versions for nvm.
+
+
+ > Use FileZilla tool to upload files to aliyun server.
+
+something need to be noticed: 
+    
+    * port `22` when use `sftp` protocol
+    * port `21` when use `ftp` protocol
+
+otherview, you cant connect the server with wrong port.
