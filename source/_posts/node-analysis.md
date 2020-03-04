@@ -1,7 +1,9 @@
 ---
-title: node_analysis
+title: Node Analysis
 date: 2018-04-22 13:56:47
-tags: node;mechanism;
+type: "tags"
+tags:
+- Node 
 ---
 
 This article is to discuss some operation mechanism inside node.js.

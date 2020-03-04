@@ -1,7 +1,9 @@
 ---
 title: React
 date: 2018-05-05 09:19:35
-tags: React
+type: "categories"
+categories:
+- React
 ---
 
 > what different between Reactv15 and Reactv16

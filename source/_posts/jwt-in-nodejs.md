@@ -1,7 +1,10 @@
 ---
-title: jwt_in_nodejs
+title: JWT in Node 
 date: 2017-12-31 13:51:58
+type: "tags"
 tags:
+- Node
+- session
 ---
 >Conclusion: jwt implement in node server
 

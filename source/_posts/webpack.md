@@ -1,7 +1,9 @@
 ---
-title: webpack
+title: Webpack
 date: 2018-06-20 12:12:00
-tags: webpack;build;tool
+type: "categories"
+categories:
+-	webpack
 ---
 
 经过webpack构建的包，本身就是一个IIFE（立即自执行函数），其接收一个模块函数表达式数组作为函数参数

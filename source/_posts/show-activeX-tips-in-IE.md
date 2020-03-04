@@ -1,7 +1,9 @@
 ---
 title: show-activeX-tips-in-IE
 date: 2017-12-26 22:13:36
+type: "tags"
 tags:
+- IE
 ---
 > Conclusion: add trusted website address for showing activeX tooltip
 

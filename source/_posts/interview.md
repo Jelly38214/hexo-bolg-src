@@ -1,7 +1,9 @@
 ---
-title: interview
+title: Interview 
 date: 2018-02-10 22:18:47
-tags: interview;daocloud;
+type: "categories"
+categories:
+- interview
 ---
 
 Prepare for daocloud

@@ -1,7 +1,9 @@
 ---
-title: programming_pearls
+title: Programming Pearls
 date: 2018-02-17 20:17:24
-tags: algorithm
+type: "tags"
+tags:
+- algorithm book
 ---
 
 ## Learning programming pearls

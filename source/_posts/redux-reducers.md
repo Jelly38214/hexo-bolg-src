@@ -1,7 +1,9 @@
 ---
-title: redux_reducers
+title: Redux
 date: 2018-01-16 22:56:29
-tags: redux reducer
+type: "categories"
+categories:
+- Redux
 ---
 
 > Conclusion: reducers in redux must be pure function

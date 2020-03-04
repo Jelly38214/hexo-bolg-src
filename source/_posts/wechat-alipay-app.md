@@ -1,7 +1,11 @@
 ---
-title: wechat_alipay_app
+title: Mini App
 date: 2018-06-29 10:22:51
-tags: 小程序; iconfont; gulp;
+type: "categories"
+categories:
+- wechat
+- alipay
+- mini app
 ---
 
 近来在开发支付宝小程序（大体和微信小程序差不多），踩了些坑，记录下来，方便复盘。

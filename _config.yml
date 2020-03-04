@@ -81,6 +81,7 @@ deploy:
   type: git
   repo: git@github.com:jelly38214/jelly38214.github.io.git
   branch: master
+  token: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtEVOfOoXr/x1tLovB+P17bjuBmbp1W/z6qzgO7JMU4jWqOsDS5ih8P66qV44cnahHhEPvZzR9e/2QZUymBSIr9ybHEWYgQ2byXE+Ro80TXKMm/OJx4zKXBAMKF6MK8Bt93eAcwHt3XmyrRpErBYZvNfQqNfZbiczA+3i3RV9QYjBQUNsMkGS55bU1Nv49cOsPh32wVXtmXxieKJag9/rJCa8M3JVFyr9Z2wJ1vtrJPuuga87P+ER0Ii4znZYcVuMPMLnbM6goQQGTGNGUHFClcrUMrpG/gW6X6KPWeWl3L/wEsvwndicdDaxupmLs+PszzWcvYKTSLEWzwPMJDso9 jelly@cnmdevjcao.local"
 
 # jsonContent 所有文章配置
 jsonContent:

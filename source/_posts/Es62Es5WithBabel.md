@@ -1,7 +1,10 @@
 ---
-title: Es62Es5WithBabel
+title: Convert ES6 into ES5 with Babel 
 date: 2018-02-01 22:54:51
-tags: ES6;babel
+type: "categories"
+categories:
+- ES6
+- Babel
 ---
 
 ## How ES6 features convert into ES5 by [Babel](https://babeljs.cn/repl/).

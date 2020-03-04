@@ -1,7 +1,10 @@
 ---
 title: aliyun
 date: 2018-07-15 22:01:22
-tags: 阿里云;服务器;aliyun;
+type: "tags"
+tags:
+- 阿里云
+- 服务器
 ---
 
 In order to learn backend knowledge, I buy a aliyun server recently. This post records the problem I met in learning.

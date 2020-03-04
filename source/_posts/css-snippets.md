@@ -1,7 +1,9 @@
 ---
-title: css_snippets
+title: CSS Snippets
 date: 2018-01-15 09:32:04
-tags: css
+type: "categories"
+categories:
+- CSS 
 ---
 ## A collection of CSS snippets(use [autoprefixer](http://autoprefixer.github.io/) to add vendor)
 

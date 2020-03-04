@@ -1,10 +1,12 @@
 ---
-title: ahs
+title: VS Code 
 date: 2018-08-11 20:34:50
-tags: 效率；工具；爱回收；
+categories:
+- vscode
+tags:
+- vscode 
+type: "categories"
 ---
-
-### 本文记录在爱回收为提供工作效率或改善开发体验所做的一些工作；
 
 1. 自定义React组件的在vscode下的智能提示
 
